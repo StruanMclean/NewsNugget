@@ -8,7 +8,7 @@
     padding-bottom: 2cm;
     border-radius: 1cm;
     justify-content: space-evenly;
-    background-color: rgb(242, 242, 242);
+    background-color: white;
     border: 2px solid #F4900C;
 }
 
@@ -38,7 +38,7 @@
         padding-bottom: 1.5cm;
         border-radius: 1cm;
         justify-content: space-evenly;
-        background-color: rgb(242, 242, 242);
+        background-color: white;
         border: 2px solid #F4900C;
     }    
 
