@@ -19,12 +19,12 @@
     max-width: 22.5cm;
     font-weight: 600;
     font-family: sans-serif;
-    text-align: center;
     letter-spacing: 0.35ch;
     word-spacing: 0.75ch;
     font-variant-ligatures: none;
     line-height: 2;
     color: black;
+    white-space: pre-line;
 }
 
 @media screen and (max-width: 1000px) {

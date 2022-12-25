@@ -9,6 +9,7 @@ import WebHeadder from '../components/WebHeadder'
 import styles from '../styles/Story.module.css'
 
 export default function Story({ data }: any) {
+
   return (
     <main className={styles.main}>
       <Head>
