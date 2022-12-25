@@ -69,6 +69,8 @@ export async function getServerSideProps({ query }: any) {
 
   const res = await client.query('SELECT * FROM website.blog_posts WHERE title=$1', [title])
 
+  await client.end()
+
   return { props: {
     data: res.rows[0]
   }}

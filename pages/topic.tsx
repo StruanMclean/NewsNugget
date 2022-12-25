@@ -4,7 +4,7 @@ import Footer from '../components/footer'
 import WebHeadder from '../components/WebHeadder'
 import styles from '../styles/Topic.module.css'
 
-export default function Topic({ data, topics }: any) {
+export default function Topic({ data, topics, pages }: any) {
 
   return (
     <main className={styles.main}>
@@ -44,6 +44,14 @@ export default function Topic({ data, topics }: any) {
             </article>
           ))
         }        
+
+        {
+          pages != 0 ?
+            <section>
+            </section>
+          :
+            null
+        }
       </section>
 
       <Footer />
@@ -54,6 +62,11 @@ export default function Topic({ data, topics }: any) {
 export async function getServerSideProps({ query }: any) {
     // GET TITLE
     let topic = query.topic
+    let offset = query.offset
+
+    if (!offset) {
+      offset = 0
+    }
   
     // FIND POST
     const { Client } = require('pg')
@@ -67,10 +80,15 @@ export async function getServerSideProps({ query }: any) {
     })
     await client.connect()
   
-    const res = await client.query('SELECT * FROM website.blog_posts WHERE topic=$1', [topic])
+    const res = await client.query('SELECT * FROM website.blog_posts WHERE topic=$1 ORDER BY posted_time DESC LIMIT 5 OFFSET $2', [topic, offset])
+    let pages = await client.query('SELECT COUNT(*) FROM website.blog_posts WHERE topic=$1', [topic])
+    pages = Math.round(pages.rows[0].count / 5)
+
+    await client.end()
   
     return { props: {
       data: res.rows,
-      topics: topic
+      topics: topic,
+      pages: pages
     }}
   }
