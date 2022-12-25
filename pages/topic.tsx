@@ -73,6 +73,8 @@ export async function getServerSideProps({ query }: any) {
     // GET TITLE
     let topic = query.topic
     let offset = query.curpa ? query.offset : 0
+
+    // curpa = current page
     let curpa = query.curpa ? query.curpa : 0
   
     // FIND POST
