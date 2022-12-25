@@ -8,7 +8,8 @@
     padding-bottom: 2cm;
     border-radius: 1cm;
     justify-content: space-evenly;
-    background-color: #F4900C;
+    background-color: rgb(242, 242, 242);
+    border: 2px solid #F4900C;
 }
 
 /* DYSLEXIA FRENDLY */
@@ -23,7 +24,7 @@
     word-spacing: 0.75ch;
     font-variant-ligatures: none;
     line-height: 2;
-    color: white;
+    color: black;
 }
 
 @media screen and (max-width: 1000px) {
@@ -37,7 +38,8 @@
         padding-bottom: 1.5cm;
         border-radius: 1cm;
         justify-content: space-evenly;
-        background-color: #F4900C;
+        background-color: rgb(242, 242, 242);
+        border: 2px solid #F4900C;
     }    
 
     .article_text {
