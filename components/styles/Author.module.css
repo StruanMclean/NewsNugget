@@ -1,0 +1,18 @@
+.author {
+    margin: auto;
+    margin-top: 3cm;
+    display: flex;
+    width: max-content;
+}
+
+.author_pic {
+    border-radius: 100cm;
+}
+
+.info {
+    margin: auto;
+    margin-left: 0.75cm;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 22.5px;
+}

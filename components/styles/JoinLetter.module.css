@@ -1,0 +1,73 @@
+.main {
+    margin: auto;
+    display: flex;
+    width: 88.4792626728vw;
+    height: 4cm;
+    max-width: 1280px;
+    margin-top: 3cm;
+    border-radius: 1cm;
+    justify-content: space-evenly;
+    background-color: #ffcd70;
+}
+
+.sub_title {
+    color: white;
+    font-size: 0.9cm;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
+    margin-right: 1cm;
+}
+
+.button {
+    width: 4.5cm;
+    height: 2cm;
+    background-color: #F4900C;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    line-height: 2cm;
+}
+
+.button:hover {
+    background-color: #ffa600;
+    scale: 1.25;
+    transition: 500ms;
+}
+
+@media screen and (max-width: 1000px) {
+    .main {
+        margin: auto;
+        display: flex;
+        width: 88.4792626728vw;
+        height: 4cm;
+        max-width: 1280px;
+        margin-top: 2cm;
+        border-radius: 1cm;
+        justify-content: space-evenly;
+        background-color: #ffcd70;
+    }    
+
+    .sub_title {
+        color: white;
+        font-size: 0.65cm;
+        font-weight: bold;
+        font-family: sans-serif;
+        text-align: center;
+        margin-right: 1cm;
+    }
+
+    .button {
+        width: 3.5cm;
+        height: 1.5cm;
+        background-color: #F4900C;
+        border-radius: 10px;
+        color: white;
+        font-weight: bold;
+        font-size: 17.5px;
+        text-align: center;
+        line-height: 1.5cm;
+    }
+}

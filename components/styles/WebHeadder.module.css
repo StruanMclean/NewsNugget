@@ -1,0 +1,93 @@
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2.5cm;
+    width: 100%;
+    background-color: white;
+    z-index: 1000000000;
+    font-family: sans-serif;
+}
+
+.headder {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1.5cm;
+    padding-right: 1.5cm;
+}
+
+.logo_and_h1 {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    height: 2.5cm;
+}
+
+.title {
+    color: #F4900C;
+    font-size: 23px;
+    font-weight: 600;
+    margin-left: 15px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    height: 2.5cm;
+}
+
+.button {
+    width: 3.5cm;
+    height: 1.35cm;
+    background-color: #F4900C;
+    border-radius: 10px;
+    color: white;
+    font-weight: 400;
+    font-size: 15.5px;
+    text-align: center;
+    line-height: 1.35cm;
+}
+
+.button:hover {
+    background-color: #8ae600;
+    scale: 1.25;
+    transition: 500ms;
+}
+
+.nav_bar {
+    display: flex;
+    color: black;
+    font-size: 17px;
+    width: 25vw;
+    max-width: 8cm;
+    justify-content: space-around;
+    margin-right: 1cm;
+}
+
+.nav_bar_item {
+    border: 0px #F4900C dashed;
+    padding-bottom: 2px;
+}
+
+@media screen and (max-width: 900px) {
+    .title {display: none;}
+
+    .headder  {
+        padding-left: 0.75cm;
+        padding-right: 0.75cm;
+    }
+
+    .button {
+        width: 2.5cm;
+        height: 1.35cm;
+    }
+
+    .nav_bar {
+        width: 47.5vw;
+        max-width: 8cm;
+        justify-content: space-around;
+        margin-right: 0.35cm;
+    }
+}

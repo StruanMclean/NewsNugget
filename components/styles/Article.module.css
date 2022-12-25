@@ -1,0 +1,51 @@
+.article {
+    margin: auto;
+    display: flex;
+    width: 88.4792626728vw;
+    max-width: 1280px;
+    margin-top: 1cm;
+    padding-top: 2.5cm;
+    padding-bottom: 2cm;
+    border-radius: 1cm;
+    justify-content: space-evenly;
+    background-color: #F4900C;
+}
+
+/* DYSLEXIA FRENDLY */
+.article_text {
+    width: 90%;    
+    font-size: 22.5px;
+    max-width: 22.5cm;
+    font-weight: 600;
+    font-family: sans-serif;
+    text-align: center;
+    letter-spacing: 0.35ch;
+    word-spacing: 0.75ch;
+    font-variant-ligatures: none;
+    line-height: 2;
+    color: white;
+}
+
+@media screen and (max-width: 1000px) {
+    .article {
+        margin: auto;
+        display: flex;
+        width: 88.4792626728vw;
+        max-width: 1280px;
+        margin-top: 1cm;
+        padding-top: 1.5cm;
+        padding-bottom: 1.5cm;
+        border-radius: 1cm;
+        justify-content: space-evenly;
+        background-color: #F4900C;
+    }    
+
+    .article_text {
+        width: 85%;
+        padding: 0cm;
+        margin: auto;
+        font-size: 22.5px;
+        word-spacing: 1ch;
+        line-height: 1.75;
+    }
+}

@@ -1,0 +1,110 @@
+.footer {
+    margin: auto;
+    width: 88.4792626728vw;
+    height: 15cm;
+    max-width: 1280px;
+    margin-top: 3cm;
+    margin-bottom: 2cm;
+    padding-top: 1.5cm;
+    padding-left: 2.5cm;
+    padding-bottom: 2cm;
+    border-radius: 1cm;
+    background-color: white;
+    border: 3px solid #F4900C;
+}
+
+.logo_and_h1 {
+    display: flex;
+    align-items: center;
+    height: 2.5cm;
+}
+
+.title {
+    color: #F4900C;
+    font-size: 23px;
+    font-weight: 600;
+    margin-left: 15px;
+    font-family: sans-serif;
+}
+
+.sub_title {
+    color: #F4900C;
+    font-size: 1cm;
+    font-weight: 600;
+    font-family: sans-serif;
+    margin-top: 1cm;
+}
+
+.Subscribe {
+    color: #F4900C;
+    font-size: 0.55cm;
+    font-weight: 600;
+    font-family: sans-serif;
+    margin-top: 0.45cm;
+}
+
+.subscribe_form {
+    display: flex;
+}
+
+@media screen and (max-width: 1000px) {
+    .footer {
+        margin: auto;
+        width: 88.4792626728vw;
+        height: 15cm;
+        max-width: 1280px;
+        margin-top: 3cm;
+        margin-bottom: 2cm;
+        padding-top: 1.5cm;
+        padding-left: 0cm;
+        padding-bottom: 2cm;
+        border-radius: 1cm;
+        background-color: white;
+        border: 3px solid #F4900C;
+        justify-content: center;
+    }
+
+    .logo_and_h1 {
+        width: 50%;
+        justify-content: center;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        height: 2.5cm;
+    }
+    
+    .title {
+        color: #F4900C;
+        font-size: 23px;
+        font-weight: 600;
+        margin-left: 15px;
+        font-family: sans-serif;
+    }
+    
+    .sub_title {
+        width: 45%;
+        text-align: center;
+        margin: auto;
+        color: #F4900C;
+        font-size: 1cm;
+        font-weight: 600;
+        font-family: sans-serif;
+        margin-top: 1cm;
+    }
+    
+    .Subscribe {
+        width: 70%;
+        text-align: center;
+        margin: auto;
+        color: #F4900C;
+        font-size: 0.55cm;
+        font-weight: 600;
+        font-family: sans-serif;
+        margin-top: 0.65cm;
+    }
+
+    .subscribe_form {
+        margin: auto;
+        width: 75%;
+    }
+}
