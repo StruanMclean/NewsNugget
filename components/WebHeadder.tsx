@@ -33,7 +33,7 @@ export default function WebHeadder(props: any) {
 
                     <section className={styles.nav}>
                         <nav className={styles.nav_bar}>
-                            <a href="/" className={styles.nav_bar_item} style={{borderBottomWidth: props.page == "home" ? 2 : 0}}>Home</a>
+                            <a onClick={() => window.location.assign("/")} className={styles.nav_bar_item} style={{borderBottomWidth: props.page == "home" ? 2 : 0}}>Home</a>
 
                             <section>
                                 <Menu>
@@ -46,7 +46,7 @@ export default function WebHeadder(props: any) {
                                 </Menu>                                
                             </section>
 
-                            <a href="/closedbata" className={styles.nav_bar_item} style={{borderBottomWidth: props.page == "newsletters" ? 2 : 0}}>Newsletters</a>
+                            <a onClick={() => window.location.assign("/closedbata")} className={styles.nav_bar_item} style={{borderBottomWidth: props.page == "newsletters" ? 2 : 0}}>Newsletters</a>
                         </nav>
 
                         <div onClick={() => window.location.assign("/")} className={styles.button}>
