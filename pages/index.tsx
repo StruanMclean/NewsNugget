@@ -74,6 +74,7 @@ export default function Home({ new_posts, tech_posts }: any) {
                   src={data2.banner_url}
                   width={1280}
                   height={720}
+                  loading="lazy"
                 />   
 
                 <div style={{alignSelf: "center"}}>

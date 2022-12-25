@@ -12,6 +12,7 @@ export default function Author(props: any) {
         src={props.author_pic}
         width={100}
         height={100}
+        loading="lazy"
       />  
 
       <div className={styles.info}>

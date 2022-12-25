@@ -26,6 +26,7 @@ export default function Header(props: any) {
           src={props.banner}
           width={1280}
           height={720}
+          loading="lazy"
         />        
       </div>
     </header>
