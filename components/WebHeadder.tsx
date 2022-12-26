@@ -42,6 +42,7 @@ export default function WebHeadder(props: any) {
                                     </MenuButton>
                                     <MenuList>
                                         <MenuItem onClick={() => {window.location.assign(`/topic?topic=Tech`)}}>Tech</MenuItem>
+                                        <MenuItem onClick={() => {window.location.assign(`/topic?topic=Finance`)}}>Finance</MenuItem>
                                     </MenuList>
                                 </Menu>                                
                             </section>
