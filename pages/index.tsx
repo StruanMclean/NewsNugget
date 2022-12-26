@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react'
 import Footer from '../components/footer'
 import { home_page_view } from '../analitics'
 
-export default function Home({ new_posts, tech_posts }: any) {
+export default function Home({ new_posts }: any) {
   const [email, setEmail] = useState('')
   const handleChange = (event: any) => setEmail(event.target.value)
 
@@ -42,8 +42,9 @@ export default function Home({ new_posts, tech_posts }: any) {
           </div>
         </header>
 
+        <h1 className={styles.title2}>You might like ...</h1>
+
         <section className={styles.container}>
-          <h1 className={styles.title2}>You might like</h1>
           {
             new_posts.map((data2: any, index: number) => (
               <article onClick={() => {window.location.assign(`/story?title="${data2["title"]}"`)}} className={styles.article}>
@@ -54,36 +55,6 @@ export default function Home({ new_posts, tech_posts }: any) {
                   src={data2.banner_url}
                   width={1280}
                   height={720}
-                />   
-
-                <div style={{alignSelf: "center"}}>
-
-                  <div className={styles.more_info}>
-                    <section className={styles.topic}>{data2.topic}</section>
-                    <h1 className={styles.published}>Published: {data2.posted_time}</h1>
-                  </div>
-
-                  <h1 className={styles.article_title}>{data2.title}</h1>
-                  <p className={styles.article_p}>{data2.subtitle}</p>
-                </div>
-              </article>
-            ))
-          }        
-        </section>
-
-        <section className={styles.container}>
-          <h1 className={styles.title2}>Tech</h1>
-          {
-            tech_posts.map((data2: any, index: number) => (
-              <article onClick={() => {window.location.assign(`/story?title="${data2["title"]}"`)}} className={styles.article}>
-                <Image
-                  loader={() => data2.banner_url}
-                  className={styles.banner}
-                  alt='Image of the event'
-                  src={data2.banner_url}
-                  width={1280}
-                  height={720}
-                  loading="lazy"
                 />   
 
                 <div style={{alignSelf: "center"}}>
@@ -122,13 +93,10 @@ export async function getServerSideProps() {
 
   await client.connect()
 
-  let new_posts = await client.query(`SELECT * FROM website.blog_posts ORDER BY posted_time DESC LIMIT 5 OFFSET 0;`, [])
+  let new_posts = await client.query(`SELECT * FROM website.blog_posts ORDER BY posted_time DESC LIMIT 12 OFFSET 0;`, [])
   new_posts = JSON.parse(JSON.stringify(new_posts.rows))
-
-  let tech_posts = await client.query(`SELECT * FROM website.blog_posts WHERE topic='Tech' ORDER BY posted_time DESC LIMIT 4;`, [])
-  tech_posts = JSON.parse(JSON.stringify(tech_posts.rows))
 
   await client.end()
 
-  return { props: {new_posts: new_posts, tech_posts: tech_posts}}
+  return { props: {new_posts: new_posts}}
 }
