@@ -4,8 +4,16 @@ import Footer from '../components/footer'
 import WebHeadder from '../components/WebHeadder'
 import styles from '../styles/Topic.module.css'
 import { Tabs, TabList, TabPanels, Tab, TabPanel, ChakraProvider } from '@chakra-ui/react'
+import { useEffect } from 'react'
+import { topic_view } from '../analitics'
 
 export default function Topic({ data, topics, pages, curpa }: any) {
+
+  useEffect(() => {
+    window.onload = () => {
+      topic_view(topics)
+    }
+  }, [])
 
   return (
     <ChakraProvider>

@@ -1,5 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import { useEffect } from 'react'
+import { article_view } from '../analitics'
 import Article from '../components/article'
 import Author from '../components/author'
 import Footer from '../components/footer'
@@ -9,6 +11,12 @@ import WebHeadder from '../components/WebHeadder'
 import styles from '../styles/Story.module.css'
 
 export default function Story({ data }: any) {
+
+  useEffect(() => {
+    window.onload = () => {
+      article_view(data["title"])
+    }
+  }, [])
 
   return (
     <main className={styles.main}>

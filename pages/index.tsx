@@ -3,12 +3,19 @@ import Image from 'next/image'
 import WebHeadder from '../components/WebHeadder'
 import styles from '../styles/Home.module.css'
 import { ChakraProvider, Input, Button } from '@chakra-ui/react'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Footer from '../components/footer'
+import { home_page_view } from '../analitics'
 
 export default function Home({ new_posts, tech_posts }: any) {
   const [email, setEmail] = useState('')
   const handleChange = (event: any) => setEmail(event.target.value)
+
+  useEffect(() => {
+    window.onload = () => {
+      home_page_view()
+    }
+  }, [])
 
   return (
     <ChakraProvider>
