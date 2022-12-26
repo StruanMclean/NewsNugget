@@ -30,6 +30,8 @@ export default function Story({ data }: any) {
 
         <meta name="viewport" content="width=600" />
         <link rel="icon" href="/favicon.png" type='image/png' />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6016171056934985" crossOrigin="anonymous"></script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6016171056934985" crossOrigin="anonymous"></script>
       </Head>
 
       <WebHeadder page="blog" />
