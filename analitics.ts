@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics, logEvent } from "firebase/analytics";
+import DEV from "./package.json"
 
 const firebaseConfig = {
   apiKey: "AIzaSyDqb6rprJXWE4_gz-xngO5tgrDQcqIktYo",
@@ -12,22 +13,28 @@ const firebaseConfig = {
 };
 
 export function home_page_view() {
-  const app = initializeApp(firebaseConfig)
-  const analytics = getAnalytics(app)
+  if (!DEV["DEV"]) {
+    const app = initializeApp(firebaseConfig)
+    const analytics = getAnalytics(app)
 
-  logEvent(analytics, "page_view", {page_title: "home"})
+    logEvent(analytics, "page_view", {page_title: "home"})    
+  }
 }
 
 export function topic_view(topic: string) {
-  const app = initializeApp(firebaseConfig)
-  const analytics = getAnalytics(app)
+  if (!DEV["DEV"]) {
+    const app = initializeApp(firebaseConfig)
+    const analytics = getAnalytics(app)
 
-  logEvent(analytics, "page_view", {page_title: topic})
+    logEvent(analytics, "page_view", {page_title: topic})
+  }
 }
 
 export function article_view(article: string) {
-  const app = initializeApp(firebaseConfig)
-  const analytics = getAnalytics(app)
+  if (!DEV["DEV"]) {
+    const app = initializeApp(firebaseConfig)
+    const analytics = getAnalytics(app)
 
-  logEvent(analytics, "page_view", {page_title: article})
+    logEvent(analytics, "page_view", {page_title: article})
+  }
 }
