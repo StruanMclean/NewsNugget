@@ -102,7 +102,7 @@ export async function getServerSideProps({ query }: any) {
   
     const res = await client.query('SELECT * FROM website.blog_posts WHERE topic=$1 ORDER BY posted_time DESC LIMIT 5 OFFSET $2', [topic, offset])
     let pages = await client.query('SELECT COUNT(*) FROM website.blog_posts WHERE topic=$1', [topic])
-    pages = Math.round(pages.rows[0].count % 5)
+    pages = Math.round(pages.rows[0].count / 5)
 
     await client.end()
   
