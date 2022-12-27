@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Script from 'next/script'
 import Footer from '../components/footer'
 import WebHeadder from '../components/WebHeadder'
 import styles from '../styles/closedbata.module.css'
@@ -11,8 +12,12 @@ export default function closedbata() {
                 <title>NewsNugget</title>
                 <meta name="viewport" content="width=600" />
                 <link rel="icon" href="/favicon.png" type='image/png' />
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6016171056934985" crossOrigin="anonymous"></script>
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6016171056934985" crossOrigin="anonymous"></script>
+                <Script
+                    async={true}
+                    strategy="beforeInteractive"
+                    crossOrigin="anonymous"
+                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6016171056934985"
+                />
             </Head>
 
             <WebHeadder page="newsletters" />

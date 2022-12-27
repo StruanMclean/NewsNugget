@@ -6,6 +6,7 @@ import { ChakraProvider, Input, Button } from '@chakra-ui/react'
 import { useEffect, useState } from 'react'
 import Footer from '../components/footer'
 import { home_page_view } from '../analitics'
+import Script from 'next/script'
 
 export default function Home({ new_posts }: any) {
   const [email, setEmail] = useState('')
@@ -24,8 +25,12 @@ export default function Home({ new_posts }: any) {
         <meta name="description" content="What's the news today?" />
         <meta name="viewport" content="width=600" />
         <link rel="icon" href="/favicon.png" type='image/png' />
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6016171056934985" crossOrigin="anonymous"></script>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6016171056934985" crossOrigin="anonymous"></script>
+        <Script
+          async={true}
+          strategy="beforeInteractive"
+          crossOrigin="anonymous"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6016171056934985"
+        />
       </Head>
 
       <WebHeadder page="home" />

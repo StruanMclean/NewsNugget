@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Script from 'next/script'
 import { useEffect } from 'react'
 import { article_view } from '../analitics'
 import Article from '../components/article'
@@ -38,8 +39,12 @@ export default function Story({ data }: any) {
 
         <meta name="viewport" content="width=600" />
         <link rel="icon" href="/favicon.png" type='image/png' />
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6016171056934985" crossOrigin="anonymous"></script>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6016171056934985" crossOrigin="anonymous"></script>
+        <Script
+          async={true}
+          strategy="beforeInteractive"
+          crossOrigin="anonymous"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6016171056934985"
+        />
       </Head>
 
       <WebHeadder page="blog" />
